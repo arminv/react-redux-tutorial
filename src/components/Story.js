@@ -1,10 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { doArchiveStory } from '../actions/archive';
 import { ButtonInline } from './Button';
 import './Story.css';
 
 const Story = ({ story, columns, onArchive }) => {
   const { title, url, author, num_comments, points, objectID } = story;
-
 
   return (
     <div className='story'>
@@ -21,4 +22,11 @@ const Story = ({ story, columns, onArchive }) => {
   );
 };
 
-export default Story;
+// mapDispatchToProps is used to pass dispatchable Redux actions as functions to React component via props:
+const mapDispatchToProps = (dispatch) => ({
+  onArchive: (id) => dispatch(doArchiveStory(id)),
+});
+
+export default connect(null, mapDispatchToProps)(Story);
+
+// export default Story;
