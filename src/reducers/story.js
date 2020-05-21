@@ -15,6 +15,22 @@ const INITIAL_STATE = [
     points: 5,
     objectID: 1,
   },
+  {
+    title: 'Redux',
+    url: 'https://github.com/reactjs/redux',
+    author: 'Dan Abramov, Andrew Clark',
+    num_comments: 4,
+    points: 6,
+    objectID: 2,
+  },
+  {
+    title: 'Redux',
+    url: 'https://github.com/reactjs/redux',
+    author: 'Dan Abramov, Andrew Clark',
+    num_comments: 5,
+    points: 7,
+    objectID: 3,
+  },
 ];
 
 function storyReducer(state = INITIAL_STATE, action) {
